@@ -6,7 +6,7 @@ Mathematically, the dithered Gaussian mechanism can be understood as rounding th
 
 This repository contains an implementation of this direct sampling procedure.
 
-The mechanism has three main properties:
+The mechanism has four main properties:
 
 - It is a post processing of the Gaussian mechanism and therefore inherits its privacy guarantees and Gaussian based privacy accounting.
 - Its output lies on a discrete grid, avoiding floating point vulnerabilities associated with directly releasing finite precision samples from a continuous Gaussian distribution.
