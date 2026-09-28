@@ -2,7 +2,7 @@
 
 Code accompanying the paper [Dithered Gaussian Mechanism for Randomness-Efficient Differential Privacy](https://arxiv.org/abs/2607.06320) by Nikita P. Kalinin and Rasmus Pagh.
 
-The dithered Gaussian mechanism is obtained by rounding the output of the Gaussian mechanism to a randomly shifted grid. After fixing the grid shift, the rounded output has an explicit discrete distribution whose CDF can be written directly using the Gaussian CDF. We can therefore sample the rounded output directly, without first sampling continuous Gaussian noise.
+Mathematically, the dithered Gaussian mechanism can be understood as rounding the output of the Gaussian mechanism to a randomly shifted grid. After fixing the grid shift, the rounded output has an explicit discrete distribution whose CDF can be written directly using the Gaussian CDF. We can therefore sample the rounded output directly, without first sampling continuous Gaussian noise.
 
 This repository contains an implementation of this direct sampling procedure.
 
@@ -11,6 +11,7 @@ The mechanism has three main properties:
 - It is a post processing of the Gaussian mechanism and therefore inherits its privacy guarantees and Gaussian based privacy accounting.
 - Its output lies on a discrete grid, avoiding floating point vulnerabilities associated with directly releasing finite precision samples from a continuous Gaussian distribution.
 - It is randomness efficient, requiring substantially fewer random bits for the privacy critical sampling step.
+- Its coordinate-wise noise distribution is unbiased and has small total variation distance from Gaussian noise.
 
 ## Dithered Gaussian mechanism
 
